@@ -26,7 +26,6 @@ class MainActivity : ComponentActivity() {
                              backgroundColor = Color.Blue,
                              contentColor = Color.White,
                              elevation = 12.dp
-
                              )
                     },
                     content = {
