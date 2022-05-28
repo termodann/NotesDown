@@ -41,7 +41,7 @@ fun AddScreen(navController: NavHostController) {
             modifier = Modifier.padding(top = 16.dp),
             onClick = { navController.navigate(NavRoute.Main.route) }
         ) {
-            Text(text = "Add Note")
+            Text(text = "Add new Note")
         }
     }
 }
