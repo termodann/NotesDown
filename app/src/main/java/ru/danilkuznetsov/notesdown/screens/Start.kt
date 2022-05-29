@@ -22,7 +22,7 @@ import ru.danilkuznetsov.notesdown.utils.TYPE_FIREBASE
 import ru.danilkuznetsov.notesdown.utils.TYPE_ROOM
 
 @Composable
-fun StartScreen(navController: NavHostController) {
+fun StartScreen(navController: NavHostController, viewModel: MainViewModel) {
     val context = LocalContext.current
     val mViewModel: MainViewModel =
         viewModel(factory = MainViewModelFactory(context.applicationContext as Application))
@@ -67,7 +67,10 @@ fun StartScreen(navController: NavHostController) {
 @Preview(showBackground = true)
 @Composable
 fun prevStartScreen(){
+    val context = LocalContext.current
+    val mViewModel: MainViewModel =
+        viewModel(factory = MainViewModelFactory(context.applicationContext as Application))
     NotesDownTheme {
-        StartScreen(navController = rememberNavController())
+        StartScreen(navController = rememberNavController(), viewModel = mViewModel)
     }
 }
